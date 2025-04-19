@@ -1,4 +1,4 @@
-const { getArachnida } = require("../controller/arachnida")
+const { getArachnida } = require("../controllers/arachnidaController")
 
 const ArachnidaRouter = require("express").Router()
 

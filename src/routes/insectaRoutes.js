@@ -1,4 +1,4 @@
-const { getInsecta } = require("../controller/insecta")
+const { getInsecta } = require("../controllers/insectaController")
 
 const InsectaRouter = require("express").Router()
 

@@ -1,8 +1,8 @@
 const express = require('express')
 const cors = require('cors')
 
-const ArachnidaRouter = require("./routes/arachnida")
-const InsectaRouter = require("./routes/insecta")
+const ArachnidaRouter = require("./routes/arachnidaRoutes")
+const InsectaRouter = require("./routes/insectaRoutes")
 
 const app = express()
 
