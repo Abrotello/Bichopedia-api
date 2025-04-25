@@ -1,9 +1,10 @@
 type conservationStatus = "Extinct (EX)" | "Extinct in the Wild (EW)" | "Critically Endangered (CR)" | "Endangered (EN)" | "Vulnerable (VU)" | "Near Threatened (NT)" | "Least Concern (LC)" | "Data Deficient (DD)" | "Not Evaluated (NE)";
+type arthropodClass = "Arachnida" | "Insecta"
 
 export interface Taxonomy {
     kingdom: string,
     phylum: string,
-    class: string,
+    class: arthropodClass,
     order: string,
 }
 
