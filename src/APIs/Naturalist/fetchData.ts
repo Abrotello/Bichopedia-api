@@ -1,4 +1,4 @@
-import { getTwoRandomIntervals } from "../../utils/operations"
+import { getTwoRandomIntervals } from "../../utils/helpers"
 
 export const fetchDataFromNaturalist = async ( taxId: number ): Promise<[]> => {
     const page = Math.floor(Math.random() * 10) + 1

@@ -1,6 +1,6 @@
 // import { InsectaSchema } from "../../schemas/Arthropoda/insectaSchema"
 import { fetchDataFromNaturalist } from "../../APIs/Naturalist/fetchData"
-import { mapNaturalistData, NaturalistData } from "../Naturalist/data"
+import { mapNaturalistData, NaturalistData } from "../../mappers/Naturalist/data"
 
 
 export const createInsectInstance = async () => {

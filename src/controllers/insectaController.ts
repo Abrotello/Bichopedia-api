@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { createInsectInstance } from "../model/Arthropoda/insecta"
+import { createInsectInstance } from "../factories/Arthropoda/insecta"
 
 
 export const getInsecta = async( req: Request, res: Response ) => {
