@@ -2,10 +2,16 @@ type conservationStatus = "Extinct (EX)" | "Extinct in the Wild (EW)" | "Critica
 type arthropodClass = "Arachnida" | "Insecta"
 
 export interface Taxonomy {
-    kingdom: string,
-    phylum: string,
+    Domain: "Eukaryota"
+    kingdom: "Animalia",
+    phylum: "Arthropoda",
+    subclass?: string,
     class: arthropodClass,
     order: string,
+    suborder?: string,
+    family?: string,
+    genus?: string,
+    species?: string,
 }
 
 export interface Name {
@@ -24,6 +30,10 @@ export interface Information {
     plague: boolean,
     distribution: string[],
     images?: string[],
+    license?: {
+        code: string,
+        attribution: string
+    }
     conservationStatus: conservationStatus,
 }
 
