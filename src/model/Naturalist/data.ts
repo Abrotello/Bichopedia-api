@@ -7,7 +7,7 @@ export interface NaturalistData {
     },
 }
 
-export const getNaturalistData = (results: []): NaturalistData[] => {
+export const mapNaturalistData = (results: []): NaturalistData[] => {
     const data: NaturalistData[] = []
 
     for (const result of results) {

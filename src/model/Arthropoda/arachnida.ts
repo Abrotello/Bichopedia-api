@@ -1,9 +1,9 @@
-import { getArachnidaData } from "../../APIs/Naturalist/fetchDataArachnida";
-import { getNaturalistData, NaturalistData } from "../Naturalist/data";
+import { fetchDataFromNaturalist } from "../../APIs/Naturalist/fetchData";
+import { mapNaturalistData, NaturalistData } from "../Naturalist/data";
 
 export const createArachnidaInstance = async () => {
-    const data = await getArachnidaData()
-    const naturalistData: NaturalistData[] = getNaturalistData(data)
+    const data = await fetchDataFromNaturalist(47119)
+    const naturalistData: NaturalistData[] = mapNaturalistData(data)
 
     return naturalistData
 }

@@ -1,11 +1,11 @@
 // import { InsectaSchema } from "../../schemas/Arthropoda/insectaSchema"
-import { getInsectaData } from "../../APIs/Naturalist/fetchDataInsect"
-import { getNaturalistData, NaturalistData } from "../Naturalist/data"
+import { fetchDataFromNaturalist } from "../../APIs/Naturalist/fetchData"
+import { mapNaturalistData, NaturalistData } from "../Naturalist/data"
 
 
 export const createInsectInstance = async () => {
-    const data = await getInsectaData()
-    const naturalistData: NaturalistData[] = getNaturalistData(data)
+    const data = await fetchDataFromNaturalist(47158)
+    const naturalistData: NaturalistData[] = mapNaturalistData(data)
 
     return naturalistData
 }
