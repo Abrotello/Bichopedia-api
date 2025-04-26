@@ -1,3 +1,5 @@
+import { getTwoRandomIntervals } from "../../utils/operations"
+
 export const getArachnidaData = async (): Promise<[]> => {
     const taxId = 47119
     const page = Math.floor(Math.random() * 10) + 1
@@ -7,7 +9,7 @@ export const getArachnidaData = async (): Promise<[]> => {
         "taxon_id": taxId,
         "taxa": "Arachnida",
         "quality_grade": "research",
-        "per_page": 5,
+        "per_page": 200,
         "page": page,
     }
 
@@ -19,7 +21,11 @@ export const getArachnidaData = async (): Promise<[]> => {
         if (!response.ok) throw new Error(`HTTP error ${response.status}`)
         
         const data = await response.json()
-        return data["results"]
+        const results = data["results"]
+        const [start, end] = getTwoRandomIntervals(results.length)
+
+        return results.slice(start, end)
+
 
     } catch (error) {
         console.error('Error fetching data:', error)
