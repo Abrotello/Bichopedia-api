@@ -1,5 +1,5 @@
 // import { InsectaSchema } from "../../schemas/Arthropoda/insectaSchema"
-import { getInsectaData } from "../../APIs/fetchDataInsect"
+import { getInsectaData } from "../../APIs/Naturalist/fetchDataInsect"
 import { getNaturalistData, NaturalistData } from "../Naturalist/data"
 
 

@@ -1,4 +1,4 @@
-import { getArachnidaData } from "../../APIs/fetchDataArachnida";
+import { getArachnidaData } from "../../APIs/Naturalist/fetchDataArachnida";
 import { getNaturalistData, NaturalistData } from "../Naturalist/data";
 
 export const createArachnidaInstance = async () => {
