@@ -1,4 +1,4 @@
-import { arachnidaSchema } from "../schemas/arachnidaSchema";
+import { arachnidaSchema } from "../schemas/Arthropoda/arachnidaSchema";
 import { Request, Response } from "express";
 
 export const getArachnida = async( req: Request, res: Response ) => {
