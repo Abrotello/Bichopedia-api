@@ -34,6 +34,7 @@ Bichopedia API devuelve un listado de organismos del reino animal (por ahora, in
 git clone https://github.com/Abrotello/Bichopedia-api.git
 cd Bichopedia-api
 docker compose up --build
+```
 
 ---
 
@@ -80,6 +81,7 @@ docker compose up --build
     }
   ]
 }
+```
 
 ---
 
@@ -126,6 +128,7 @@ docker compose up --build
     }
   ]
 }
+```
 
 ---
 
