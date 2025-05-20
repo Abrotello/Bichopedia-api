@@ -1,24 +1,32 @@
 export interface NaturalistData {
-    scientifiName: string,
+    name: {
+        scientificName: string,
+        commonName: string[] | string,
+    }
     photo: string | string[],
     license: {
         code: string,
         attribution: string,
     },
+    id: number,
 }
 
 export const mapNaturalistData = (results: []): NaturalistData[] => {
     const data: NaturalistData[] = []
 
     for (const result of results) {
-        const scientificName = getScientificName(result["taxon"])
+        const names = getNames(result["taxon"])
         const license = getLicence(result["taxon"])
         const photos = getPhotos(result["taxon"])
 
         data.push({
-            scientifiName: scientificName,
+            name: {
+                scientificName: names.scientificName,
+                commonName: names.commonName
+            },
             photo: photos,
-            license: {attribution: license.attribution, code: license.license}
+            license: {attribution: license.attribution, code: license.license},
+            id: getId(result["taxon"])
         })
     }
     
@@ -26,9 +34,13 @@ export const mapNaturalistData = (results: []): NaturalistData[] => {
 }
 
 
-const getScientificName = (result: {[key: string]: any}): string => {
+const getNames = (result: {[key: string]: any}): {scientificName: string, commonName: string[] | string} => {
     const scientificName = result["name"]
-    return scientificName
+    const commonName = result["preferred_common_name"]
+    return {
+        scientificName, 
+        commonName
+    }
 }
 
 const getLicence = (result: {[key: string]: any}): {license: string, attribution: string} => {
@@ -43,6 +55,10 @@ const getLicence = (result: {[key: string]: any}): {license: string, attribution
 const getPhotos = (result: {[key: string]: any}): string | string[] => {
     const photos = result["default_photo"]["medium_url"]
     return photos
+}
+
+const getId = ( result: {[key: string]: any} ): number => {
+    return result["id"]
 }
 
 const getInsectaDataByName = async (name: string) => {}
