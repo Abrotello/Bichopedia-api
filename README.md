@@ -134,13 +134,13 @@ docker compose up --build
 
 ## 📜 Créditos y licencias
 
-Imágenes provistas por usuarios de iNaturalist.org
-Licencias de uso incluidas en cada resultado
-Esta API es de uso educativo y sin fines de lucro
+- Imágenes provistas por usuarios de iNaturalist.org
+- Licencias de uso incluidas en cada resultado
+- Esta API es de uso educativo y sin fines de lucro
 
 ---
 
 ## 📫 Contacto
 
-Desarrollado por Adrián
-Proyecto personal educativo · 🇲🇽 México
+- Desarrollado por Adrián
+- Proyecto personal educativo · 🇲🇽 México
