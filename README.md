@@ -8,7 +8,7 @@ Construida con Express, TypeScript y Docker.
 
 ## 🚀 ¿Qué hace?
 
-Bichopedia API devuelve un listado de organismos del reino animal (por ahora, insectos y arácnidos) con datos como:
+Bichopedia API devuelve un listado de insectos y arácnidos con datos como:
 
 - Nombre científico y común (cuando está disponible)
 - Foto representativa con licencia
