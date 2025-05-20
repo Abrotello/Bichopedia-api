@@ -5,7 +5,6 @@ export const fetchDataFromNaturalist = async ( taxId: number ): Promise<[]> => {
     const url = `https://api.inaturalist.org/v1/observations?taxon_id=${taxId}`
 
     const params: {} = {
-        "taxon_id": taxId,
         "taxa": "Arachnida",
         "quality_grade": "research",
         "per_page": 200,
