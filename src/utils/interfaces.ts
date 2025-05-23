@@ -27,17 +27,17 @@ export interface Behavior {
 }
 
 export interface Information {
-    plague: boolean,
-    distribution: string[],
+    plague?: boolean,
+    distribution?: string[],
     images?: string[],
     license?: {
         code: string,
         attribution: string
     }
-    conservationStatus: conservationStatus,
+    conservationStatus?: conservationStatus,
 }
 
 export interface Medical {
-    venomous: boolean,
-    sympthoms: string[],
+    venomous?: boolean,
+    sympthoms?: string[],
 }
